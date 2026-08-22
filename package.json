@@ -1,0 +1,35 @@
+{
+  "name": "bmw-car-simulation",
+  "version": "1.0.0",
+  "description": "Physics-driven driving simulation with two distinct vehicles (BMW M3 GTR, Lamborghini Revuelto), Three.js + GSAP",
+  "scripts": {
+    "start": "node serve.mjs",
+    "test": "node tests/run.mjs",
+    "test:vehicles": "node tests/vehicles.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:all": "node tests/run.mjs && node tests/vehicles.mjs && node tests/browser.mjs",
+    "perf": "node tests/perf.mjs",
+    "shot": "node tests/shot.mjs"
+  },
+  "keywords": [
+    "three.js",
+    "webgl",
+    "vehicle-physics",
+    "driving-simulator",
+    "tyre-model",
+    "multiplayer",
+    "lamborghini",
+    "bmw"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "three": "^0.185.1"
+  },
+  "private": true,
+  "devDependencies": {
+    "puppeteer": "^25.8.0"
+  }
+}

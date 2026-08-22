@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physics Driving Simulation &mdash; BMW M3 GTR &amp; Lamborghini Revuelto</title>
+<meta name="description"
+      content="A physics-driven driving simulation with two very different cars: raycast suspension, Magic-Formula tyres, torque-converter and dual-clutch drivetrains, an electric drive axle, ABS and multiplayer. Built with Three.js.">
+<link rel="stylesheet" href="css/style.css">
+
+<!--
+  The renderer and animation libraries are vendored under /vendor so the
+  project runs with no network access and no CDN dependency. Both are MIT
+  (three.js) and GreenSock's standard "no charge" licence (gsap core).
+-->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/build/three.module.js",
+    "three/addons/": "./vendor/three/addons/",
+    "gsap": "./vendor/gsap/index.js"
+  }
+}
+</script>
+</head>
+
+<body>
+  <canvas id="viewport"></canvas>
+
+  <!-- Instrument cluster; populated by js/hud.js -->
+  <div id="hud" aria-hidden="true"></div>
+
+  <!-- Developer telemetry (H / F1); populated by js/debug.js -->
+  <div id="debug"></div>
+
+  <!-- Pause overlay (Esc); populated by js/hud.js -->
+  <div id="pause"></div>
+
+  <!-- Garage / vehicle selection (G); populated by js/garage.js -->
+  <div id="garage"></div>
+
+  <!-- Shown while a vehicle model is being swapped in -->
+  <div id="swap"></div>
+
+  <!-- Loading screen; populated by js/hud.js -->
+  <div id="loading"></div>
+
+  <noscript>
+    <div class="noscript">This simulation requires JavaScript and WebGL2.</div>
+  </noscript>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
